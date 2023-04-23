@@ -9,19 +9,18 @@ public class Main {
     public static void main(String[] args) {
 
         // реализуйте алгоритм здесь
-        Util.getConnection();
-
+//        Util.getConnection();
+          Util.createSessionFactory();
         UserService userService = new UserServiceImpl();
 
         while (true) {
             System.out.println("" +
-                    "1. CREATE TABLE :\n" +
-                    "2. DROP TABLE :\n" +
-                    "3. SAVE USERS :\n" +
-                    "4. REMOVE USER BY ID :\n" +
-                    "5. GET ALL USERS :\n" +
-                    "6. CLEAN USERS TABLE \n");
-            System.out.println("ENTER BY COMMANDS :");
+                    "1. CREATE TABLE :" +
+                    "2. DROP TABLE :" +
+                    "3. SAVE USERS :" +
+                    "4. REMOVE USER BY ID :" +
+                    "5. GET ALL USERS :" +
+                    "6. CLEAN USERS TABLE ");
            int num = new Scanner(System.in).nextInt();
             switch (num) {
                case 1 -> userService.createUsersTable();
